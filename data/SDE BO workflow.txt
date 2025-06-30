@@ -1,0 +1,51 @@
+BO function:
+
+Input: 
+df-contains all previous data, include newly tested ones and training set
+
+Output:
+new (x) composition: e.g. (1, 5, 27, 67)
+
+
+BO properties:
+- sample space: 4 -> K, Na, Cs, Li
+- mixing resolution: 1%
+- Noise level: 5% (error from the sensor)
+
+
+Physical layer workflow:
+
+initialization (activate the cell) K
+calibration (calibrate the sensor) Na
+find the calibrated line
+
+BO(based on training data, make the first suggestion)-> comp 1
+
+runcell (comp 1) -> 7000PPB
+
+calibrate result(7000PPB) -> generate new PPB
+
+label the new data point that was tested
+
+cleaning()
+
+BO(updated df with new label) -> suggest new comp
+
+runcell(*new comp from BO)
+
+repeat...
+
+
+
+
+Dragon bless, No bug
+        ,  ,
+          \\ \\           
+          ) \\ \\    _p_ 
+          )^\))\))  /  *\ 
+           \_|| || / /^`-' 
+  __       -\ \\--/ / 
+<'  \\___/   ___. )'
+     `====\ )___/\\ 
+          //     `"
+          \\    /  \
